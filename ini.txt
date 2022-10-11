@@ -1,0 +1,90 @@
+// NAMA		: Khairul Rajul
+// NRP		: 5004221145
+// Jurusan	: Kimia
+
+#include <iostream>
+#include <cmath>
+
+#define GRAVITASI 10 //10 m/s^2
+#define START_PENGUKURAN 1 //pengukuran dimulai dari 1 meter
+#define SUDUT 45 //sudut elevasi tembakan
+
+int mencari_V0(int v)
+{
+    int v0;
+      if (v > 10){
+        if (v > 20){
+            if (v > 30){
+                std::cout << "Dimohon untuk memasukkan data kurang atau sama dengan 30!" << std::endl;
+            }
+            else {
+                v0 = v - 5;
+            }
+        }
+        else {
+            v0 = v - 3;
+        }
+        }
+        else {
+            v0 = v - 1;
+        }
+  	return v0;
+}
+
+int speed_dgn_loss(int variabel)
+{
+    int speed;
+    speed = variabel;
+    return speed;
+}
+
+
+int main() 
+{
+    int a;
+    int b;
+    double c = 1.41421356237;
+    double d = 0.5;
+    int g = 10;
+    int jarak;
+    double jarak2;
+    int hasil;
+    double hitung1;
+    double t;
+    std::cin >> a;
+    b = speed_dgn_loss(a);
+    hasil = mencari_V0(a);
+    
+    hitung1 = hasil * d * c;
+    t = 2 * hitung1 / g;
+    jarak = hitung1 * t;
+    jarak2 = hitung1 * t;
+    
+    double vtang_1;
+    double vtang_2;
+    double vtang_hasil;
+    double q = d * c;
+    double fak_error = 0.1002;
+    vtang_1 = jarak2 / t;
+    vtang_2 = vtang_1 / q;
+    
+     if (hasil + 5 > 10){
+        if (hasil + 5 > 20){
+            if (hasil + 5 > 30){
+                std::cout << "Error!" << std::endl;
+            }
+            else {
+                vtang_hasil = vtang_2 + 5 - fak_error;
+            }
+        }
+        else {
+            vtang_hasil = vtang_2 + 3;
+        }
+        }
+        else {
+            vtang_hasil = vtang_2 + 1;
+        }
+    
+    std::cout << jarak << " " << vtang_hasil;
+    return 0;
+}
