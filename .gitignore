@@ -92,8 +92,10 @@ int main()
             vtang_hasil = vtang_2 + 1;
         }
 
-    std::cout << "Ini adalah nilai jarak tempuh terjauh : " << jarak << " m" << std::endl;
-    std::cout << "Ini merupakan percepatan awal benda pada sudut 45 derajat : " << vtang_hasil << " m/s";
+    std::cout << "Nilai kecepatan awal benda dengan loss : " << hasil << std::endl;
+    std::cout << "Nilai jarak tempuh terjauh : " << jarak2 << " m" << std::endl;
+    std::cout << "Nilai jarak tempuh terjauh yang terbaca : " << jarak << " m" << std::endl;
+    std::cout << "Percepatan awal benda pada sudut 45 derajat dari jarak tempuh yang telah dibulatkan tanpa loss : " << vtang_hasil << " m/s" << std::endl;
+    std::cout << "Nilai percepatan jika dibulatkan tanpa loss maka akan menghasilkan : " << a << " m/s";
     std::cin.get();
     return 0;
-}
